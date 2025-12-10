@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="49.192" tests="4" skipped="0" failures="1" errors="0" timestamp="2025-12-07T15:42:14.676299Z">
+<testcase classname="Amazon Product add to cart Functionality" name="Add to cart products" time="11.334">
+<system-out><![CDATA[
+Given I am on Amazon homepage...............................................passed
+When I search for iphone15..................................................passed
+And I click on search button................................................passed
+Then search result should be displayed......................................passed
+When I click on add to cart.................................................passed
+Then trash icon should be displayed.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon Login Functionality" name="Successful login with valid credentials" time="16.105">
+<failure type="org.openqa.selenium.TimeoutException" message="Expected condition failed: waiting for visibility of element located by By.xpath: //a/span[text()='All'] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\SUNILK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56097}, goog:processID: 10412, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56097/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4278aa2d808a5807f33afd1fc6b944bd">
+<![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a/span[text()='All'] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\SUNILK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56097}, goog:processID: 10412, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56097/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4278aa2d808a5807f33afd1fc6b944bd
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.amazon.utilites.WaitUtilitie.explicitWaitForvisibilityOfElementLocated(WaitUtilitie.java:24)
+	at com.amazon.pages.LoginPage.getAllText(LoginPage.java:76)
+	at com.amazon.stepdefinitions.LoginSteps.i_should_be_logged_in_successfully(LoginSteps.java:49)
+	at ✽.I should be logged in successfully(file:///C:/Users/sunilkumar06/BenchProject/AmazonProject/src/test/resources/features/login.feature:12)
+]]>
+</failure>
+<system-out><![CDATA[
+Given I navigate to Amazon login page.......................................passed
+When I enter valid username.................................................passed
+And I click on continue button..............................................passed
+And I enter valid password..................................................passed
+And click on login button...................................................passed
+Then I should be logged in successfully.....................................failed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon Login Functionality" name="Failed login with invalid credentials" time="10.959">
+<system-out><![CDATA[
+Given I navigate to Amazon login page.......................................passed
+When I enter invalid username...............................................passed
+And I click on continue button..............................................passed
+Then Looks like you are new to Amazon text should be visible................passed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon Product Search Functionality" name="Search for different products" time="10.626">
+<system-out><![CDATA[
+Given I am on Amazon homepage...............................................passed
+When I search for iphone15..................................................passed
+And I click on search button................................................passed
+Then search result should be displayed......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
